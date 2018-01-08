@@ -1,9 +1,9 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
-@Pipe({ name: 'awesome' })
-/** Precede the input string with the word "Awesome " */
-export class AwesomePipe implements PipeTransform {
-  transform(phrase: string) {
-    return phrase ? 'Awesome ' + phrase : '';
+// Highlight the host element or any InputElement in blue
+@Directive({ selector: '[highlight], input' })
+export class ContactHighlightDirective {
+  constructor(el: ElementRef) {
+    el.nativeElement.style.backgroundColor = 'powderblue';
   }
 }
