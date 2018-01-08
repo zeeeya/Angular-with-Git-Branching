@@ -12,8 +12,8 @@ import { TitleComponent } from './title.component';
   HighlightDirective,
   TitleComponent,
 ],
-  imports: [ BrowserModule ],
-  providers: [ UserService ],
+  imports: [ BrowserModule, FormsModule ],
+ providers: [ ContactService, UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
