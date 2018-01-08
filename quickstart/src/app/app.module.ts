@@ -15,7 +15,7 @@ import { TitleComponent } from './title.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
